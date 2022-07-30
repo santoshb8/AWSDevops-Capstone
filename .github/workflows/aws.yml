@@ -24,8 +24,7 @@
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
 #    and best practices on handling the access key credentials.
 
-on:
-  push:
+push:
     branches:
       - master
 
@@ -61,7 +60,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: <YOUR_AWS_REGION>
+        aws-region: us-east-1
 
     - name: Login to Amazon ECR
       id: login-ecr
@@ -96,3 +95,5 @@ jobs:
         service: ecs-devops-sandbox-service
         cluster: ecs-devops-sandbox-cluster
         wait-for-service-stability: true
+
+
