@@ -22,7 +22,7 @@
     "memory": "512",
     "cpu": "256",
     "executionRoleArn": "arn:aws:iam::360532960681:role/ecs-devops-sandbox-execution-role",
-    "family": "ecs-devops-sandbox-task-definition",
+    "family": "ecs-devops-sandbox-task-definition:2",
     "taskRoleArn": "",
     "placementConstraints": []
 }
