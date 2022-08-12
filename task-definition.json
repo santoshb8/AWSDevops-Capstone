@@ -1,93 +1,28 @@
-{
-  "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::360532960681:role/ecs-devops-sandbox-execution-role",
-  "containerDefinitions": [
-    {
-      "dnsSearchDomains": [],
-      "environmentFiles": [],
-      "logConfiguration": null,
-      "entryPoint": [],
-      "portMappings": [],
-      "command": [],
-      "linuxParameters": null,
-      "cpu": 0,
-      "environment": [],
-      "resourceRequirements": null,
-      "ulimits": [],
-      "dnsServers": [],
-      "mountPoints": [],
-      "workingDirectory": null,
-      "secrets": [],
-      "dockerSecurityOptions": [],
-      "memory": null,
-      "memoryReservation": null,
-      "volumesFrom": [],
-      "stopTimeout": null,
-      "image": "amazon/amazon-ecs-sample",
-      "startTimeout": null,
-      "firelensConfiguration": null,
-      "dependsOn": null,
-      "disableNetworking": null,
-      "interactive": null,
-      "healthCheck": null,
-      "essential": true,
-      "links": [],
-      "hostname": null,
-      "extraHosts": [],
-      "pseudoTerminal": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
-      "dockerLabels": {},
-      "systemControls": [],
-      "privileged": null,
-      "name": "ecs-devops-sandbox"
-    }
-  ],
-  "placementConstraints": [],
-  "memory": "512",
-  "taskRoleArn": "arn:aws:iam::360532960681:role/EcsDevopsSandboxCdkStack-ecsdevopssandboxtaskdefin-SPK2CEISO40E",
-  "compatibilities": [
-    "EC2",
-    "FARGATE"
-  ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:360532960681:task-definition/ecs-devops-sandbox-task-definition:2",
-  "family": "ecs-devops-sandbox-task-definition",
-  "requiresAttributes": [
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.task-eni"
-    }
-  ],
-  "pidMode": null,
-  "requiresCompatibilities": [
-    "FARGATE"
-  ],
-  "networkMode": "awsvpc",
-  "runtimePlatform": null,
-  "cpu": "256",
-  "revision": 2,
-  "status": "ACTIVE",
-  "inferenceAccelerators": null,
-  "proxyConfiguration": null,
-  "volumes": []
+"requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "inferenceAccelerators": [],
+    "containerDefinitions": [
+        {
+            "name": "ecs-devops-sandbox",
+            "image": "ecs-devops-sandbox-repository:00000",
+            "resourceRequirements": null,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": "8080",
+                    "protocol": "tcp"
+                }
+                
+            ]
+        }
+    ],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "512",
+    "cpu": "256",
+    "executionRoleArn": "arn:aws:iam::360532960681:role/ecs-devops-sandbox-execution-role",
+    "family": "ecs-devops-sandbox-task-definition:2",
+    "taskRoleArn": "",
+    "placementConstraints": []
 }
