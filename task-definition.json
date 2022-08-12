@@ -1,19 +1,19 @@
-"requiresCompatibilities": [
+{
+    "requiresCompatibilities": [
         "FARGATE"
     ],
     "inferenceAccelerators": [],
-    "containerDefinitions": [
+    "containerDefinitions":[
         {
             "name": "ecs-devops-sandbox",
-            "image": "ecs-devops-sandbox-repository:00000",
+            "image": "ecs-devops-sanbox-repository:00000",
             "resourceRequirements": null,
             "essential": true,
             "portMappings": [
                 {
                     "containerPort": "8080",
-                    "protocol": "tcp"
+                    "protocol":"tcp"
                 }
-                
             ]
         }
     ],
@@ -25,4 +25,4 @@
     "family": "ecs-devops-sandbox-task-definition",
     "taskRoleArn": "",
     "placementConstraints": []
-
+}
